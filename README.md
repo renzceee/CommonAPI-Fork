@@ -1,3 +1,12 @@
+# What Changed?
+## Unreleased / Dark Fog Compatibility Fix
+### Fixed
+- Fixed `FileNotFoundException: Could not load file or assembly 'UnityEngine.InputLegacyModule'` by switching from NuGet Unity packages to local game assembly references.
+- Resolved compilation errors in `LocalizationModule` caused by the removal of `Localization.Language` struct in the Dark Fog update.
+- Updated `ERecipeType.Custom` usage to match the new enum value (20) in the game code.
+- Fixed `EntityDataSetNullPatch` compilation error by temporarily disabling the patch (target fields were removed from `EntityData`).
+- Resolved `Localization.OnLanguageChange` event vs field ambiguity by using `Publicizer` to rename the conflicting field in `Assembly-CSharp.dll`.
+
 # CommonAPI
 A modding library for Dyson Sphere Program. Provides multiple features to make adding custom content to DSP easier.
 
