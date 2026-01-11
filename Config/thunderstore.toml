@@ -1,0 +1,28 @@
+[config]
+schemaVersion = "0.0.1"
+
+[package]
+namespace = "CommonAPI"
+name = "CommonAPI"
+description = "A modding library for Dyson Sphere Program. Currently is under development."
+websiteUrl = "https://github.com/kremnev8/CommonAPI"
+containsNsfwContent = false
+
+  [package.dependencies]
+  xiaoye97-BepInEx = "5.4.17"
+  xiaoye97-LDBTool = "3.0.1"
+  CommonAPI-DSPModSave = "1.2.1"
+
+[build]
+icon = "./icon.png"
+readme = "./README.md"
+outdir = "./../Build"
+
+  [[build.copy]]
+  source = "./../Staging"
+  target = "./"
+
+[publish]
+repository = "https://thunderstore.io"
+communities = [ "dyson-sphere-program" ]
+categories = [ ]	
